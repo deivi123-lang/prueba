@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Librería Doña Josefina
+    </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="pro.css">
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         ENCABEZADO
+    =================================================== -->
+
+    <header class="encabezado">
+
+        <div class="logo">
+
+            <span class="logo-icono">
+                🌸
+            </span>
+
+            <div>
+
+                <h1>
+                    LIBRERÍA
+                </h1>
+
+                <h2>
+                    DOÑA JOSEFINA
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTÓN DEL CARRITO -->
+
+        <button
+            class="boton-carrito"
+            id="abrirCarrito"
+            type="button"
+        >
+
+            🛒
+
+            <span>
+                Carrito
+            </span>
+
+            <b id="contadorCarrito">
+                0
+            </b>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         PRESENTACIÓN
+    =================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-contenido">
+
+            <span class="hero-pequeno">
+                ✨ BIENVENIDOS ✨
+            </span>
+
+            <h2>
+                Todo lo que necesitas
+                <br>
+                en un solo lugar
+            </h2>
+
+            <p>
+                Descubre nuestros productos escolares,
+                artículos de oficina y detalles
+                llenos de estilo.
+            </p>
+
+            <a
+                href="#productos"
+                class="boton-principal"
+            >
+                VER PRODUCTOS
+            </a>
+
+        </div>
+
+
+        <div class="hero-decoracion">
+
+            <div class="libro-3d">
+
+                <span>
+                    📖
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         BUSCADOR
+    =================================================== -->
+
+    <section class="zona-buscador">
+
+        <div class="buscador">
+
+            <span>
+                🔎
+            </span>
+
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar un producto..."
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         CATEGORÍAS
+    =================================================== -->
+
+    
+<section class="categorias">
+
+    <button class="filtro activo" data-categoria="Todos">
+        Todos
+    </button>
+
+    <button class="filtro" data-categoria="Cuadernos">
+        📓 Cuadernos
+    </button>
+
+    <button class="filtro" data-categoria="Escritura">
+        🖊️ Escritura
+    </button>
+
+    <button class="filtro" data-categoria="Marcadores y colores">
+        🎨 Marcadores y colores
+    </button>
+
+    <button class="filtro" data-categoria="Borradores y tajadores">
+        ✏️ Borradores y tajadores
+    </button>
+
+    <button class="filtro" data-categoria="Tipos de hojas">
+        📄 Tipos de hojas
+    </button>
+    <button class="filtro" data-categoria="Escolar">
+        🎒 Escolar
+    </button>
+
+<button class="filtro" data-categoria="Plastilina">
+    🎨 Plastilina
+</button>
+
+</section>
+
+
+    <!-- ==================================================
+         CATÁLOGO
+    =================================================== -->
+
+    <main id="productos"
+          class="catalogo">
+
+        <div class="titulo-seccion">
+
+            <span>
+                NUESTRA COLECCIÓN
+            </span>
+
+            <h2>
+                Productos
+            </h2>
+
+            <p>
+                Elige tus favoritos y agrégalos a tu carrito.
+            </p>
+
+        </div>
+
+
+        <!--
+            LOS 30 PRODUCTOS
+            SE GENERARÁN AUTOMÁTICAMENTE
+            DESDE JAVASCRIPT.
+        -->
+
+        <div
+            class="productos"
+            id="listaProductos"
+        >
+        </div>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         CARRITO
+    =================================================== -->
+
+    <div
+        class="fondo-carrito"
+        id="fondoCarrito"
+        aria-hidden="true"
+    >
+
+        <aside class="carrito">
+
+            <div class="carrito-encabezado">
+
+                <div>
+
+                    <span>
+                        TU COMPRA
+                    </span>
+
+                    <h2>
+                        🛒 Mi carrito
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="cerrar-carrito"
+                    id="cerrarCarrito"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCTOS DEL CARRITO -->
+
+            <div
+                class="productos-carrito"
+                id="productosCarrito"
+            >
+
+                <div class="carrito-vacio">
+
+                    <div>
+                        🛒
+                    </div>
+
+                    <h3>
+                        Tu carrito está vacío
+                    </h3>
+
+                    <p>
+                        Agrega algunos productos
+                        para comenzar tu compra.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOTAL -->
+
+            <div class="carrito-pie">
+
+                <div class="total">
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <strong id="totalCarrito">
+                        Bs. 0.00
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="boton-vaciar"
+                    id="vaciarCarrito"
+                    type="button"
+                >
+
+                    🗑️ Vaciar carrito
+
+                </button>
+
+
+                <button
+                    class="boton-comprar"
+                    id="comprarWhatsApp"
+                    type="button"
+                >
+
+                    💬 Comprar por WhatsApp
+
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         INFORMACIÓN
+    =================================================== -->
+
+    <section class="informacion">
+
+        <div class="informacion-card">
+
+            <span>
+                🚚
+            </span>
+
+            <div>
+
+                <h3>
+                    Atención personalizada
+                </h3>
+
+                <p>
+                    Estamos para ayudarte con tu pedido.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="informacion-card">
+
+            <span>
+                💳
+            </span>
+
+            <div>
+
+                <h3>
+                    Compra fácil
+                </h3>
+
+                <p>
+                    Agrega tus productos al carrito.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="informacion-card">
+
+            <span>
+                💬
+            </span>
+
+            <div>
+
+                <h3>
+                    Pedidos por WhatsApp
+                </h3>
+
+                <p>
+                    Recibe tu pedido directamente en WhatsApp.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PIE DE PÁGINA
+    =================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+
+            🌸
+
+            <h2>
+                LIBRERÍA DOÑA JOSEFINA
+            </h2>
+
+            <p>
+                Un lugar bonito para tus ideas.
+            </p>
+
+        </div>
+
+
+        <div class="footer-derechos">
+
+            <p>
+                © 2026 Librería Doña Josefina
+            </p>
+
+            <p>
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         BOTÓN VOLVER ARRIBA
+    =================================================== -->
+
+    <button
+        class="volver-arriba"
+        id="volverArriba"
+        type="button"
+    >
+        ↑
+    </button>
+
+    <script src="pro.js"></script>
+
+</body>
+</html>

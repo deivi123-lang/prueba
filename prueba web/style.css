@@ -1,0 +1,3346 @@
+
+/* =========================================================
+   LIBRERÍA DOÑA JOSEFINA
+   ESTILOS CSS
+========================================================= */
+
+/* =========================================================
+   1. VARIABLES
+========================================================= */
+
+:root {
+
+    --crema: #fdf8f4;
+    --crema-2: #f8eee8;
+    --rosa: #e8c8c0;
+    --rosa-claro: #f4ded8;
+    --rosa-fuerte: #c98f83;
+    --terracota: #a96f64;
+    --marron: #60483f;
+    --marron-oscuro: #3f302b;
+    --blanco: #ffffff;
+    --verde: #6f9d7a;
+
+    --sombra:
+        0 15px 40px rgba(96, 72, 63, 0.12);
+
+    --sombra-fuerte:
+        0 25px 60px rgba(96, 72, 63, 0.20);
+
+    --radio: 22px;
+
+    --transicion:
+        all 0.35s ease;
+
+}
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    background:
+        var(--crema);
+
+    color:
+        var(--marron);
+
+    overflow-x: hidden;
+
+}
+
+button,
+input {
+
+    font-family: inherit;
+
+}
+
+button {
+
+    cursor: pointer;
+
+}
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+/* =========================================================
+   3. HEADER
+========================================================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    min-height: 82px;
+
+    padding:
+        15px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background:
+        rgba(253, 248, 244, 0.92);
+
+    backdrop-filter:
+        blur(15px);
+
+    -webkit-backdrop-filter:
+        blur(15px);
+
+    border-bottom:
+        1px solid rgba(201, 143, 131, 0.15);
+
+}
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.logo-flor {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--rosa-claro);
+
+    color:
+        var(--terracota);
+
+    font-size: 27px;
+
+    animation:
+        girarSuave 8s linear infinite;
+
+}
+
+.logo h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 0.9;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+}
+
+.logo h1 span {
+
+    display: block;
+
+    font-size: 17px;
+
+    color:
+        var(--terracota);
+
+}
+
+.logo p {
+
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color:
+        #92766c;
+
+}
+
+/* =========================================================
+   4. MENÚ
+========================================================= */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.menu a {
+
+    position: relative;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color:
+        var(--marron);
+
+    transition:
+        var(--transicion);
+
+}
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background:
+        var(--rosa-fuerte);
+
+    transition:
+        width 0.3s ease;
+
+}
+
+.menu a:hover {
+
+    color:
+        var(--rosa-fuerte);
+
+}
+
+.menu a:hover::after {
+
+    width: 100%;
+
+}
+
+/* =========================================================
+   5. BOTÓN CARRITO
+========================================================= */
+
+.boton-carrito {
+
+    position: relative;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        var(--marron);
+
+    color:
+        white;
+
+    font-size: 20px;
+
+    transition:
+        var(--transicion);
+
+}
+
+.boton-carrito:hover {
+
+    transform:
+        translateY(-4px)
+        rotate(-5deg);
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+.boton-carrito b {
+
+    position: absolute;
+
+    top: -5px;
+
+    right: -3px;
+
+    min-width: 20px;
+
+    height: 20px;
+
+    padding: 0 5px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--rosa-fuerte);
+
+    color: white;
+
+    font-size: 10px;
+
+}
+
+/* =========================================================
+   6. HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 680px;
+
+    padding:
+        80px 8%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fdf8f4 0%,
+            #f8ebe5 100%
+        );
+
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    right: -180px;
+
+    top: -180px;
+
+    background:
+        rgba(232, 200, 192, 0.28);
+
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    left: -120px;
+
+    bottom: -150px;
+
+    background:
+        rgba(244, 222, 216, 0.7);
+
+}
+
+/* HERO TEXTO */
+
+.hero-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+    animation:
+        aparecerIzquierda 1s ease both;
+
+}
+
+.etiqueta {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color:
+        var(--rosa-fuerte);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+.hero h2 {
+
+    max-width: 700px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(55px, 7vw, 100px);
+
+    line-height: 0.88;
+
+    font-weight: 500;
+
+    color:
+        var(--marron-oscuro);
+
+}
+
+.hero h2 span {
+
+    color:
+        var(--terracota);
+
+    font-style: italic;
+
+}
+
+.hero-contenido > p {
+
+    max-width: 570px;
+
+    margin-top: 28px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color:
+        #806e66;
+
+}
+
+/* =========================================================
+   7. BOTONES HERO
+========================================================= */
+
+.hero-botones {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+.boton-principal {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    min-height: 52px;
+
+    padding:
+        0 25px;
+
+    border-radius: 50px;
+
+    background:
+        var(--marron);
+
+    color:
+        white;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        var(--transicion);
+
+    box-shadow:
+        0 10px 25px rgba(96, 72, 63, 0.18);
+
+}
+
+.boton-principal span {
+
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+.boton-principal:hover {
+
+    background:
+        var(--terracota);
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(96, 72, 63, 0.25);
+
+}
+
+.boton-principal:hover span {
+
+    transform:
+        translateX(5px);
+
+}
+
+.boton-secundario {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding:
+        0 25px;
+
+    border:
+        1px solid #d8b5ac;
+
+    border-radius: 50px;
+
+    color:
+        var(--marron);
+
+    font-size: 12px;
+
+    transition:
+        var(--transicion);
+
+}
+
+.boton-secundario:hover {
+
+    background:
+        white;
+
+    transform:
+        translateY(-3px);
+
+}
+
+/* =========================================================
+   8. DETALLES HERO
+========================================================= */
+
+.hero-detalles {
+
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 50px;
+
+}
+
+.hero-detalles div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+.hero-detalles strong {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 27px;
+
+    color:
+        var(--terracota);
+
+}
+
+.hero-detalles span {
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color:
+        #92766c;
+
+}
+
+/* =========================================================
+   9. LIBRO 3D
+========================================================= */
+
+.hero-visual {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: grid;
+
+    place-items: center;
+
+    perspective: 1200px;
+
+    animation:
+        aparecerDerecha 1s ease both;
+
+}
+
+.libro-3d {
+
+    position: relative;
+
+    width: 280px;
+
+    height: 390px;
+
+    transform-style:
+        preserve-3d;
+
+    transform:
+        rotateY(-20deg)
+        rotateX(7deg)
+        rotateZ(-3deg);
+
+    transition:
+        transform 0.5s ease;
+
+    animation:
+        flotarLibro 5s ease-in-out infinite;
+
+}
+
+.libro-portada {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius:
+        6px 15px 15px 6px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #bd8277,
+            #9f665c
+        );
+
+    box-shadow:
+        25px 30px 40px rgba(70, 45, 38, 0.25);
+
+    transform:
+        translateZ(25px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+.libro-portada::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border:
+        1px solid rgba(255,255,255,0.45);
+
+    border-radius: 4px;
+
+}
+
+.libro-portada span {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+.libro-portada h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+}
+
+.libro-portada h4 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 46px;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+}
+
+.libro-portada small {
+
+    margin-top: 20px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+}
+
+.libro-hojas {
+
+    position: absolute;
+
+    top: 8px;
+
+    right: -18px;
+
+    width: 28px;
+
+    height: calc(100% - 16px);
+
+    border-radius: 0 5px 5px 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #fff 0px,
+            #fff 4px,
+            #e8ddd7 5px
+        );
+
+    transform:
+        rotateY(90deg)
+        translateZ(15px);
+
+    transform-origin:
+        left center;
+
+}
+
+.libro-lomo {
+
+    position: absolute;
+
+    left: -20px;
+
+    top: 0;
+
+    width: 25px;
+
+    height: 100%;
+
+    border-radius:
+        8px 0 0 8px;
+
+    background:
+        #805148;
+
+    transform:
+        rotateY(-90deg)
+        translateZ(5px);
+
+    transform-origin:
+        right center;
+
+}
+
+/* =========================================================
+   10. DECORACIONES
+========================================================= */
+
+.decoracion {
+
+    position: absolute;
+
+    color:
+        var(--rosa-fuerte);
+
+    font-size: 30px;
+
+    animation:
+        flotar 4s ease-in-out infinite;
+
+}
+
+.decoracion-1 {
+
+    top: 10%;
+
+    right: 10%;
+
+}
+
+.decoracion-2 {
+
+    left: 8%;
+
+    top: 28%;
+
+    font-size: 40px;
+
+    animation-delay: 1s;
+
+}
+
+.decoracion-3 {
+
+    right: 5%;
+
+    bottom: 15%;
+
+    animation-delay: 2s;
+
+}
+
+/* =========================================================
+   11. BUSCADOR
+========================================================= */
+
+.buscador-seccion {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: -35px;
+
+    padding:
+        0 8%;
+
+}
+
+.buscador-contenido {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        0 25px;
+
+    border-radius: 50px;
+
+    background:
+        white;
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+.buscador-icono {
+
+    font-size: 19px;
+
+}
+
+.buscador-contenido input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color:
+        var(--marron);
+
+    font-size: 13px;
+
+}
+
+.buscador-contenido input::placeholder {
+
+    color:
+        #b39c94;
+
+}
+
+/* =========================================================
+   12. SECCIONES
+========================================================= */
+
+.seccion-titulo {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+.seccion-titulo > span {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color:
+        var(--rosa-fuerte);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+.seccion-titulo h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(42px, 5vw, 65px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color:
+        var(--marron-oscuro);
+
+}
+
+.seccion-titulo p {
+
+    max-width: 550px;
+
+    margin:
+        15px auto 0;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color:
+        #8a756c;
+
+}
+
+/* =========================================================
+   13. CATEGORÍAS
+========================================================= */
+
+.categorias {
+
+    padding:
+        120px 8% 80px;
+
+}
+
+.categorias-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 15px;
+
+}
+
+.categoria-card {
+
+    position: relative;
+
+    min-height: 180px;
+
+    padding: 20px;
+
+    border:
+        1px solid #ead9d1;
+
+    border-radius:
+        var(--radio);
+
+    background:
+        rgba(255,255,255,0.55);
+
+    color:
+        var(--marron);
+
+    text-align: center;
+
+    transition:
+        var(--transicion);
+
+    overflow: hidden;
+
+}
+
+.categoria-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    right: -45px;
+
+    bottom: -45px;
+
+    background:
+        var(--rosa-claro);
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+.categoria-card:hover::before {
+
+    transform:
+        scale(2);
+
+}
+
+.categoria-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--rosa);
+
+    background:
+        white;
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+.categoria-card.activo {
+
+    background:
+        var(--marron);
+
+    color:
+        white;
+
+    border-color:
+        var(--marron);
+
+}
+
+.categoria-card.activo::before {
+
+    background:
+        rgba(255,255,255,0.08);
+
+}
+
+.categoria-icono {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 65px;
+
+    height: 65px;
+
+    margin:
+        0 auto 15px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--rosa-claro);
+
+    font-size: 28px;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+.categoria-card:hover .categoria-icono {
+
+    transform:
+        rotateY(180deg)
+        scale(1.08);
+
+}
+
+.categoria-card h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+}
+
+.categoria-card span {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    opacity: 0.7;
+
+}
+
+/* =========================================================
+   14. CATÁLOGO
+========================================================= */
+
+.catalogo {
+
+    padding:
+        80px 8% 120px;
+
+    background:
+        #fffaf7;
+
+}
+
+.productos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+/* =========================================================
+   15. TARJETA PRODUCTO
+========================================================= */
+
+.producto {
+
+    position: relative;
+
+    border:
+        1px solid #eee0da;
+
+    border-radius:
+        var(--radio);
+
+    background:
+        white;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    transform-style:
+        preserve-3d;
+
+    animation:
+        aparecerAbajo 0.6s ease both;
+
+}
+
+.producto:hover {
+
+    box-shadow:
+        var(--sombra-fuerte);
+
+}
+
+.producto-imagen {
+
+    height: 220px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f9e9e4,
+            #fdf5f0
+        );
+
+    font-size: 80px;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+.producto:hover .producto-imagen {
+
+    transform:
+        scale(1.08);
+
+}
+
+.producto-info {
+
+    padding: 22px;
+
+}
+
+.producto-categoria {
+
+    display: inline-block;
+
+    padding:
+        5px 10px;
+
+    border-radius: 30px;
+
+    background:
+        var(--rosa-claro);
+
+    color:
+        var(--terracota);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+.producto-info h3 {
+
+    margin-top: 12px;
+
+    min-height: 45px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    color:
+        var(--marron-oscuro);
+
+}
+
+.producto-descripcion {
+
+    min-height: 40px;
+
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    color:
+        #927f76;
+
+}
+
+.producto-precio {
+
+    margin-top: 15px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color:
+        var(--terracota);
+
+}
+
+.boton-agregar {
+
+    width: 100%;
+
+    min-height: 43px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        var(--marron);
+
+    color:
+        white;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition:
+        var(--transicion);
+
+}
+
+.boton-agregar:hover {
+
+    background:
+        var(--terracota);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(96,72,63,0.2);
+
+}
+
+/* =========================================================
+   16. PRODUCTOS SIN RESULTADOS
+========================================================= */
+
+.sin-productos {
+
+    grid-column:
+        1 / -1;
+
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+.sin-productos div {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+.sin-productos h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+}
+
+.sin-productos p {
+
+    margin-top: 5px;
+
+    color:
+        #927f76;
+
+    font-size: 12px;
+
+}
+
+/* =========================================================
+   17. BANNER
+========================================================= */
+
+.banner {
+
+    position: relative;
+
+    min-height: 450px;
+
+    margin:
+        0 6%;
+
+    padding:
+        70px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius:
+        35px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #b57b71,
+            #d6a49a
+        );
+
+    color:
+        white;
+
+}
+
+.banner::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    right: -100px;
+
+    top: -180px;
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
+}
+
+.banner::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    right: 100px;
+
+    bottom: -170px;
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+}
+
+.banner-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.banner-contenido > span {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+}
+
+.banner h2 {
+
+    margin-top: 15px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 75px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+}
+
+.banner p {
+
+    margin:
+        20px 0 30px;
+
+    font-size: 13px;
+
+    opacity: 0.9;
+
+}
+
+.banner .boton-principal {
+
+    background:
+        white;
+
+    color:
+        var(--marron);
+
+}
+
+.banner-decoracion {
+
+    position: absolute;
+
+    right: 13%;
+
+    font-size: 180px;
+
+    opacity: 0.2;
+
+    animation:
+        flotar 4s ease-in-out infinite;
+
+}
+
+/* =========================================================
+   18. NOSOTROS
+========================================================= */
+
+.nosotros {
+
+    padding:
+        140px 8%;
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+}
+
+.nosotros-imagen {
+
+    min-height: 500px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+        35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ead0c8,
+            #f7e8e2
+        );
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+.marco-decorativo {
+
+    width: 70%;
+
+    height: 75%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(169,111,100,.5);
+
+    text-align: center;
+
+}
+
+.marco-decorativo span {
+
+    font-size: 50px;
+
+    color:
+        var(--terracota);
+
+}
+
+.marco-decorativo strong {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 130px;
+
+    line-height: 0.8;
+
+    font-weight: 400;
+
+    color:
+        var(--terracota);
+
+}
+
+.marco-decorativo small {
+
+    margin-top: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+}
+
+.nosotros-contenido > span {
+
+    color:
+        var(--rosa-fuerte);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+.nosotros-contenido h2 {
+
+    margin:
+        15px 0 25px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 5vw, 70px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    color:
+        var(--marron-oscuro);
+
+}
+
+.nosotros-contenido p {
+
+    max-width: 600px;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color:
+        #806f67;
+
+}
+
+.nosotros-datos {
+
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 35px;
+
+}
+
+.nosotros-datos div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+.nosotros-datos strong {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 32px;
+
+    color:
+        var(--terracota);
+
+}
+
+.nosotros-datos span {
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+/* =========================================================
+   19. CONTACTO
+========================================================= */
+
+.contacto {
+
+    padding:
+        100px 8% 130px;
+
+    background:
+        #fffaf7;
+
+}
+
+.contacto-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+.contacto-card {
+
+    min-height: 130px;
+
+    padding:
+        25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border:
+        1px solid #ead9d1;
+
+    border-radius:
+        20px;
+
+    background:
+        white;
+
+    transition:
+        var(--transicion);
+
+}
+
+.contacto-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+.contacto-icono {
+
+    width: 55px;
+
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--rosa-claro);
+
+    font-size: 24px;
+
+}
+
+.contacto-card h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+}
+
+.contacto-card p {
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    color:
+        #927f76;
+
+}
+
+.contacto-card > span {
+
+    margin-left: auto;
+
+    font-size: 20px;
+
+    color:
+        var(--terracota);
+
+}
+
+.contacto-card.whatsapp:hover {
+
+    border-color:
+        #9bc9a5;
+
+}
+
+/* =========================================================
+   20. FOOTER
+========================================================= */
+
+.footer {
+
+    padding:
+        70px 8% 25px;
+
+    background:
+        var(--marron-oscuro);
+
+    color:
+        #f8ebe5;
+
+}
+
+.footer-contenido {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding-bottom: 50px;
+
+}
+
+.footer-logo > span {
+
+    font-size: 35px;
+
+    color:
+        var(--rosa);
+
+}
+
+.footer-logo h2 {
+
+    margin-top: 10px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+}
+
+.footer-logo h2 strong {
+
+    display: block;
+
+    color:
+        var(--rosa);
+
+}
+
+.footer-logo p {
+
+    margin-top: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: 0.6;
+
+}
+
+.footer-links,
+.footer-social {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.footer-links h3,
+.footer-social h3 {
+
+    margin-bottom: 8px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 23px;
+
+    font-weight: 500;
+
+    color:
+        white;
+
+}
+
+.footer-links a {
+
+    width: fit-content;
+
+    font-size: 11px;
+
+    opacity: 0.65;
+
+    transition:
+        var(--transicion);
+
+}
+
+.footer-links a:hover {
+
+    color:
+        var(--rosa);
+
+    opacity: 1;
+
+    transform:
+        translateX(4px);
+
+}
+
+.footer-social > div {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.footer-social a {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    transition:
+        var(--transicion);
+
+}
+
+.footer-social a:hover {
+
+    background:
+        var(--rosa);
+
+    color:
+        var(--marron-oscuro);
+
+    transform:
+        translateY(-4px);
+
+}
+
+.footer-bottom {
+
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
+    font-size: 9px;
+
+    opacity: 0.5;
+
+}
+
+/* =========================================================
+   21. CARRITO
+========================================================= */
+
+.fondo-carrito {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    background:
+        rgba(48, 35, 30, 0.45);
+
+    backdrop-filter:
+        blur(5px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+}
+
+.fondo-carrito.activo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.carrito {
+
+    width: min(450px, 100%);
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        var(--crema);
+
+    transform:
+        translateX(100%);
+
+    transition:
+        transform 0.4s cubic-bezier(.77,0,.18,1);
+
+}
+
+.fondo-carrito.activo .carrito {
+
+    transform:
+        translateX(0);
+
+}
+
+/* CARRITO HEADER */
+
+.carrito-header {
+
+    padding:
+        28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid #ead9d1;
+
+}
+
+.carrito-header span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color:
+        var(--rosa-fuerte);
+
+}
+
+.carrito-header h2 {
+
+    margin-top: 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+}
+
+.cerrar-carrito {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        var(--rosa-claro);
+
+    color:
+        var(--marron);
+
+    font-size: 25px;
+
+    transition:
+        var(--transicion);
+
+}
+
+.cerrar-carrito:hover {
+
+    background:
+        var(--marron);
+
+    color:
+        white;
+
+    transform:
+        rotate(90deg);
+
+}
+
+/* PRODUCTOS DEL CARRITO */
+
+.productos-carrito {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding:
+        10px 28px;
+
+}
+
+.carrito-vacio {
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+.carrito-vacio div {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+.carrito-vacio h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 28px;
+
+}
+
+.carrito-vacio p {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color:
+        #927f76;
+
+}
+
+/* CARRITO FOOTER */
+
+.carrito-footer {
+
+    padding:
+        25px 28px;
+
+    border-top:
+        1px solid #ead9d1;
+
+    background:
+        white;
+
+}
+
+.carrito-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.carrito-total span {
+
+    font-size: 12px;
+
+    color:
+        #806f67;
+
+}
+
+.carrito-total strong {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    color:
+        var(--terracota);
+
+}
+
+.boton-comprar {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        var(--verde);
+
+    color:
+        white;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition:
+        var(--transicion);
+
+}
+
+.boton-comprar:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(111,157,122,.25);
+
+}
+
+.boton-vaciar {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        #a17d72;
+
+    font-size: 10px;
+
+    text-decoration: underline;
+
+}
+
+/* =========================================================
+   22. WHATSAPP FLOTANTE
+========================================================= */
+
+.whatsapp-flotante {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    z-index: 2000;
+
+    width: 58px;
+
+    height: 58px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        #25D366;
+
+    color:
+        white;
+
+    font-size: 26px;
+
+    box-shadow:
+        0 10px 30px rgba(37,211,102,.3);
+
+    animation:
+        pulsoWhatsApp 2s infinite;
+
+    transition:
+        var(--transicion);
+
+}
+
+.whatsapp-flotante:hover {
+
+    transform:
+        scale(1.12)
+        rotate(8deg);
+
+}
+
+/* =========================================================
+   23. VOLVER ARRIBA
+========================================================= */
+
+.volver-arriba {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 95px;
+
+    z-index: 1900;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        var(--marron);
+
+    color:
+        white;
+
+    font-size: 18px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        var(--transicion);
+
+}
+
+.volver-arriba.visible {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+
+}
+
+.volver-arriba:hover {
+
+    background:
+        var(--terracota);
+
+    transform:
+        translateY(-4px);
+
+}
+
+/* =========================================================
+   24. ANIMACIONES
+========================================================= */
+
+@keyframes aparecerIzquierda {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+@keyframes aparecerDerecha {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+@keyframes aparecerAbajo {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+@keyframes flotarLibro {
+
+    0%,
+    100% {
+
+        transform:
+            rotateY(-20deg)
+            rotateX(7deg)
+            rotateZ(-3deg)
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            rotateY(-16deg)
+            rotateX(9deg)
+            rotateZ(-2deg)
+            translateY(-15px);
+
+    }
+
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px);
+
+    }
+
+}
+
+@keyframes girarSuave {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+@keyframes pulsoWhatsApp {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,.4);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 15px rgba(37,211,102,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,0);
+
+    }
+
+}
+
+/* =========================================================
+   25. BARRA DE SCROLL
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background:
+        var(--crema);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 10px;
+
+    background:
+        var(--rosa);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        var(--rosa-fuerte);
+
+}
+
+/* =========================================================
+   26. SELECCIÓN DE TEXTO
+========================================================= */
+
+::selection {
+
+    background:
+        var(--rosa);
+
+    color:
+        var(--marron-oscuro);
+
+}
+
+/* =========================================================
+   27. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+
+        padding:
+            15px 4%;
+
+    }
+
+    .menu {
+
+        gap: 18px;
+
+    }
+
+    .hero {
+
+        padding:
+            70px 6%;
+
+    }
+
+    .categorias,
+    .catalogo,
+    .nosotros,
+    .contacto {
+
+        padding-left: 6%;
+
+        padding-right: 6%;
+
+    }
+
+    .categorias-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+    .productos {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+    .nosotros {
+
+        gap: 60px;
+
+    }
+
+}
+
+/* =========================================================
+   28. RESPONSIVE - TABLET PEQUEÑA
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .menu {
+
+        display: none;
+
+    }
+
+    .hero {
+
+        grid-template-columns:
+            1fr;
+
+        text-align: center;
+
+        min-height: auto;
+
+        padding-top: 80px;
+
+    }
+
+    .hero-contenido > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    .hero-botones {
+
+        justify-content: center;
+
+    }
+
+    .hero-detalles {
+
+        justify-content: center;
+
+    }
+
+    .hero-visual {
+
+        min-height: 450px;
+
+    }
+
+    .categorias-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .productos {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .nosotros {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .nosotros-imagen {
+
+        min-height: 450px;
+
+    }
+
+    .contacto-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .footer-contenido {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+    .footer-logo {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+/* =========================================================
+   29. RESPONSIVE - CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        min-height: 70px;
+
+        padding:
+            10px 18px;
+
+    }
+
+    .logo-flor {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 22px;
+
+    }
+
+    .logo h1 {
+
+        font-size: 16px;
+
+    }
+
+    .logo h1 span {
+
+        font-size: 14px;
+
+    }
+
+    .logo p {
+
+        font-size: 6px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .boton-carrito {
+
+        width: 43px;
+
+        height: 43px;
+
+    }
+
+    .hero {
+
+        padding:
+            65px 20px;
+
+    }
+
+    .hero h2 {
+
+        font-size:
+            clamp(52px, 15vw, 75px);
+
+    }
+
+    .hero-contenido > p {
+
+        font-size: 12px;
+
+    }
+
+    .hero-botones {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .boton-principal,
+    .boton-secundario {
+
+        width: 100%;
+
+    }
+
+    .hero-detalles {
+
+        gap: 20px;
+
+    }
+
+    .hero-detalles strong {
+
+        font-size: 23px;
+
+    }
+
+    .hero-detalles span {
+
+        font-size: 7px;
+
+    }
+
+    .hero-visual {
+
+        min-height: 380px;
+
+    }
+
+    .libro-3d {
+
+        width: 220px;
+
+        height: 310px;
+
+    }
+
+    .libro-portada h3 {
+
+        font-size: 32px;
+
+    }
+
+    .libro-portada h4 {
+
+        font-size: 36px;
+
+    }
+
+    .buscador-seccion {
+
+        padding:
+            0 20px;
+
+    }
+
+    .buscador-contenido {
+
+        min-height: 60px;
+
+        padding:
+            0 20px;
+
+    }
+
+    .categorias,
+    .catalogo,
+    .nosotros,
+    .contacto {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+    .categorias {
+
+        padding-top: 90px;
+
+    }
+
+    .seccion-titulo {
+
+        margin-bottom: 35px;
+
+    }
+
+    .seccion-titulo h2 {
+
+        font-size: 48px;
+
+    }
+
+    .categorias-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+    .categoria-card {
+
+        min-height: 155px;
+
+        padding: 15px 8px;
+
+    }
+
+    .categoria-icono {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 24px;
+
+    }
+
+    .categoria-card h3 {
+
+        font-size: 19px;
+
+    }
+
+    .categoria-card span {
+
+        font-size: 8px;
+
+    }
+
+    .productos {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 18px;
+
+    }
+
+    .producto-imagen {
+
+        height: 210px;
+
+    }
+
+    .banner {
+
+        margin:
+            0 15px;
+
+        padding:
+            60px 25px;
+
+        border-radius:
+            25px;
+
+    }
+
+    .banner h2 {
+
+        font-size: 52px;
+
+    }
+
+    .banner-decoracion {
+
+        right: -15px;
+
+        font-size: 120px;
+
+    }
+
+    .nosotros {
+
+        padding-top: 90px;
+
+        padding-bottom: 90px;
+
+        gap: 50px;
+
+    }
+
+    .nosotros-imagen {
+
+        min-height: 350px;
+
+    }
+
+    .marco-decorativo strong {
+
+        font-size: 100px;
+
+    }
+
+    .nosotros-contenido h2 {
+
+        font-size: 50px;
+
+    }
+
+    .nosotros-datos {
+
+        gap: 20px;
+
+    }
+
+    .nosotros-datos strong {
+
+        font-size: 27px;
+
+    }
+
+    .footer {
+
+        padding:
+            60px 20px 20px;
+
+    }
+
+    .footer-contenido {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 40px;
+
+    }
+
+    .footer-logo {
+
+        grid-column:
+            auto;
+
+    }
+
+    .footer-bottom {
+
+        flex-direction:
+            column;
+
+    }
+
+    .whatsapp-flotante {
+
+        right: 18px;
+
+        bottom: 18px;
+
+        width: 53px;
+
+        height: 53px;
+
+    }
+
+    .volver-arriba {
+
+        right: 18px;
+
+        bottom: 82px;
+
+    }
+
+}
+
+/* =========================================================
+   30. PANTALLAS MUY PEQUEÑAS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo h1 {
+
+        font-size: 14px;
+
+    }
+
+    .logo h1 span {
+
+        font-size: 12px;
+
+    }
+
+    .hero h2 {
+
+        font-size: 48px;
+
+    }
+
+    .categorias-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .hero-detalles {
+
+        gap: 12px;
+
+    }
+
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}

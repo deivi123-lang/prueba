@@ -1,0 +1,2263 @@
+/* =========================================================
+   LIBRERÍA DOÑA JOSEFINA
+   ESTILOS CSS
+========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES
+========================================================= */
+
+:root {
+
+    --crema: #fffaf7;
+    --crema-oscuro: #f8eee9;
+
+    --rosa: #e9c8c0;
+    --rosa-claro: #f5dfd9;
+    --rosa-fuerte: #c58f83;
+
+    --cafe: #60483f;
+    --cafe-claro: #8b6b61;
+
+    --blanco: #f7f6ee;
+
+    --texto: #51413b;
+
+    --sombra:
+        0 15px 40px rgba(96, 72, 63, 0.12);
+
+    --sombra-fuerte:
+        0 20px 50px rgba(96, 72, 63, 0.20);
+
+    --radio: 22px;
+
+}
+
+
+/* =========================================================
+   2. RESETEO
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            #fff 0%,
+            transparent 25%
+        ),
+        var(--crema);
+
+    color: var(--texto);
+
+    overflow-x: hidden;
+
+}
+
+
+button,
+input {
+
+    font-family: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =========================================================
+   3. ENCABEZADO
+========================================================= */
+
+.encabezado {
+
+    width: 100%;
+
+    min-height: 90px;
+
+    padding: 18px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(255, 250, 247, 0.90);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-bottom:
+        1px solid rgba(197, 143, 131, 0.15);
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.logo-icono {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8ddd6,
+            #ead0c8
+        );
+
+    font-size: 25px;
+
+    box-shadow:
+        0 8px 20px rgba(197,143,131,.15);
+
+}
+
+
+.logo h1 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    font-weight: 600;
+
+    color: var(--cafe-claro);
+
+}
+
+
+.logo h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+    color: var(--cafe);
+
+}
+
+
+/* =========================================================
+   4. BOTÓN CARRITO
+========================================================= */
+
+.boton-carrito {
+
+    border: none;
+
+    background:
+        var(--blanco);
+
+    color: var(--cafe);
+
+    padding: 13px 20px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    box-shadow:
+        var(--sombra);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.boton-carrito:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--sombra-fuerte);
+
+}
+
+
+.boton-carrito b {
+
+    min-width: 25px;
+
+    height: 25px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--rosa-fuerte);
+
+    color: white;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   5. HERO
+========================================================= */
+
+.hero {
+
+    min-height: 650px;
+
+    padding:
+        70px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(233, 200, 192, .30);
+
+    filter:
+        blur(5px);
+
+    top: -150px;
+
+    right: -100px;
+
+}
+
+
+.hero::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    color: var(--rosa-fuerte);
+
+    font-size: 30px;
+
+    left: 8%;
+
+    top: 18%;
+
+    animation:
+        flotar 4s ease-in-out infinite;
+
+}
+
+
+.hero-contenido {
+
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.hero-pequeno {
+
+    display: inline-block;
+
+    color: var(--rosa-fuerte);
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.hero h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(50px, 7vw, 90px);
+
+    line-height: .9;
+
+    color: var(--cafe);
+
+    font-weight: 600;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero p {
+
+    max-width: 520px;
+
+    line-height: 1.8;
+
+    color: var(--cafe-claro);
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================================
+   6. BOTÓN PRINCIPAL
+========================================================= */
+
+.boton-principal {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 16px 30px;
+
+    background:
+        var(--cafe);
+
+    color: white;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 15px 30px rgba(96,72,63,.20);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.boton-principal:hover {
+
+    transform:
+        translateY(-5px);
+
+    background:
+        var(--rosa-fuerte);
+
+    box-shadow:
+        0 20px 35px rgba(197,143,131,.30);
+
+}
+
+
+/* =========================================================
+   7. LIBRO 3D
+========================================================= */
+
+.hero-decoracion {
+
+    width: 400px;
+
+    height: 400px;
+
+    display: grid;
+
+    place-items: center;
+
+    perspective: 1000px;
+
+}
+
+
+.libro-3d {
+
+    width: 220px;
+
+    height: 290px;
+
+    position: relative;
+
+    transform:
+        rotateY(-20deg)
+        rotateX(8deg)
+        rotateZ(-3deg);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .2s ease;
+
+    animation:
+        libroFlotando 5s ease-in-out infinite;
+
+}
+
+
+.libro-3d::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius:
+        8px 18px 18px 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8aaa0,
+            #bd8175
+        );
+
+    box-shadow:
+        25px 25px 35px
+        rgba(96,72,63,.22);
+
+    transform:
+        translateZ(-12px);
+
+}
+
+
+.libro-3d::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+
+    height: 100%;
+
+    left: -10px;
+
+    top: 0;
+
+    background:
+        #a97065;
+
+    border-radius:
+        8px 0 0 8px;
+
+}
+
+
+.libro-3d span {
+
+    position: absolute;
+
+    z-index: 5;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 90px;
+
+    border-radius:
+        8px 18px 18px 8px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8e5df,
+            #e5beb5
+        );
+
+    border:
+        5px solid rgba(255,255,255,.45);
+
+    box-shadow:
+        inset -10px 0 20px
+        rgba(96,72,63,.08);
+
+}
+
+
+/* =========================================================
+   8. BUSCADOR
+========================================================= */
+
+.zona-buscador {
+
+    padding:
+        10px 8% 30px;
+
+}
+
+
+.buscador {
+
+    max-width: 700px;
+
+    margin:
+        auto;
+
+    background:
+        white;
+
+    border-radius:
+        50px;
+
+    padding:
+        5px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+
+.buscador span {
+
+    font-size: 20px;
+
+}
+
+
+.buscador input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 15px 5px;
+
+    color: var(--cafe);
+
+    background: transparent;
+
+}
+
+
+.buscador input::placeholder {
+
+    color:
+        #bca9a3;
+
+}
+
+
+/* =========================================================
+   9. CATEGORÍAS
+========================================================= */
+
+.categorias {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding:
+        15px 6% 45px;
+
+}
+
+
+.filtro {
+
+    border: none;
+
+    padding:
+        11px 20px;
+
+    border-radius:
+        50px;
+
+    background:
+        white;
+
+    color:
+        var(--cafe-claro);
+
+    box-shadow:
+        0 7px 20px
+        rgba(96,72,63,.07);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.filtro:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.filtro.activo {
+
+    background:
+        var(--cafe);
+
+    color:
+        white;
+
+}
+
+
+/* =========================================================
+   10. CATÁLOGO
+========================================================= */
+
+.catalogo {
+
+    padding:
+        30px 6% 90px;
+
+}
+
+
+.titulo-seccion {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        50px;
+
+}
+
+
+.titulo-seccion span {
+
+    color:
+        var(--rosa-fuerte);
+
+    letter-spacing:
+        4px;
+
+    font-size:
+        11px;
+
+}
+
+
+.titulo-seccion h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        60px;
+
+    color:
+        var(--cafe);
+
+    line-height:
+        1;
+
+    margin:
+        12px 0;
+
+}
+
+
+.titulo-seccion p {
+
+    color:
+        var(--cafe-claro);
+
+    font-size:
+        14px;
+
+}
+
+
+/* =========================================================
+   11. GRID PRODUCTOS
+========================================================= */
+
+.productos {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(240px, 1fr)
+        );
+
+    gap:
+        28px;
+
+}
+
+
+/* =========================================================
+   12. TARJETA PRODUCTO
+========================================================= */
+
+.producto {
+
+    background:
+        rgba(255,255,255,.90);
+
+    border:
+        1px solid
+        rgba(197,143,131,.10);
+
+    border-radius:
+        var(--radio);
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 12px 35px
+        rgba(96,72,63,.08);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.producto:hover {
+
+    box-shadow:
+        0 25px 55px
+        rgba(96,72,63,.16);
+
+}
+
+
+/* =========================================================
+   13. IMAGEN PRODUCTO
+========================================================= */
+
+.producto-imagen {
+
+    height:220px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:linear-gradient(
+            135deg,
+            #faece8,
+            #f3d9d2
+        );
+
+    font-size:80px;
+
+    position:relative;
+
+}
+
+
+.producto-imagen::before {
+
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    top:
+        18px;
+
+    right:
+        22px;
+
+    color:
+        rgba(255,255,255,.8);
+
+    font-size:
+        20px;
+
+}
+
+
+.producto-imagen::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        100px;
+
+    height:
+        100px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.20);
+
+    filter:
+        blur(2px);
+
+}
+
+
+/* =========================================================
+   14. INFORMACIÓN PRODUCTO
+========================================================= */
+
+.producto-info {
+
+    padding:
+        23px;
+
+}
+
+
+.producto-categoria {
+
+    color:
+        var(--rosa-fuerte);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.producto h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    color:
+        var(--cafe);
+
+    font-size:
+        25px;
+
+    margin:
+        7px 0;
+
+}
+
+
+.producto-descripcion {
+
+    color:
+        #907c75;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
+
+    min-height:
+        40px;
+
+}
+
+
+.producto-precio {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    color:
+        var(--cafe);
+
+    font-size:
+        27px;
+
+    font-weight:
+        700;
+
+    margin:
+        15px 0;
+
+}
+
+
+/* =========================================================
+   15. BOTÓN AGREGAR
+========================================================= */
+
+.boton-agregar {
+
+    width:
+        100%;
+
+    border:
+        none;
+
+    padding:
+        13px;
+
+    border-radius:
+        50px;
+
+    background:
+        var(--rosa-claro);
+
+    color:
+        var(--cafe);
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        1px;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.boton-agregar:hover {
+
+    background:
+        var(--cafe);
+
+    color:
+        white;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================================
+   16. CARRITO - FONDO
+========================================================= */
+
+.fondo-carrito {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    background:
+        rgba(45,32,27,.45);
+
+    backdrop-filter:
+        blur(5px);
+
+    z-index:
+        3000;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transition:
+        .35s ease;
+
+}
+
+
+.fondo-carrito.activo {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+}
+
+
+/* =========================================================
+   17. CARRITO
+========================================================= */
+
+.carrito {
+
+    position:
+        absolute;
+
+    right:
+        0;
+
+    top:
+        0;
+
+    width:
+        min(450px, 100%);
+
+    height:
+        100%;
+
+    background:
+        var(--crema);
+
+    padding:
+        30px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    transform:
+        translateX(100%);
+
+    transition:
+        transform .4s cubic-bezier(.77,0,.18,1);
+
+}
+
+
+.fondo-carrito.activo
+.carrito {
+
+    transform:
+        translateX(0);
+
+}
+
+
+/* =========================================================
+   18. ENCABEZADO CARRITO
+========================================================= */
+
+.carrito-encabezado {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    padding-bottom:
+        20px;
+
+    border-bottom:
+        1px solid
+        #ead9d3;
+
+}
+
+
+.carrito-encabezado span {
+
+    color:
+        var(--rosa-fuerte);
+
+    letter-spacing:
+        3px;
+
+    font-size:
+        10px;
+
+}
+
+
+.carrito-encabezado h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        32px;
+
+    color:
+        var(--cafe);
+
+}
+
+
+.cerrar-carrito {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--rosa-claro);
+
+    color:
+        var(--cafe);
+
+    font-size:
+        25px;
+
+    transition:
+        .3s;
+
+}
+
+
+.cerrar-carrito:hover {
+
+    transform:
+        rotate(90deg);
+
+    background:
+        var(--cafe);
+
+    color:
+        white;
+
+}
+
+
+/* =========================================================
+   19. PRODUCTOS CARRITO
+========================================================= */
+
+.productos-carrito {
+
+    flex:
+        1;
+
+    overflow-y:
+        auto;
+
+    padding:
+        15px 5px;
+
+}
+
+
+.productos-carrito::-webkit-scrollbar {
+
+    width:
+        5px;
+
+}
+
+
+.productos-carrito::-webkit-scrollbar-thumb {
+
+    background:
+        var(--rosa);
+
+    border-radius:
+        20px;
+
+}
+
+
+/* =========================================================
+   20. CARRITO VACÍO
+========================================================= */
+
+.carrito-vacio {
+
+    min-height:
+        350px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+}
+
+
+.carrito-vacio > div {
+
+    width:
+        90px;
+
+    height:
+        90px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--rosa-claro);
+
+    font-size:
+        40px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.carrito-vacio h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        25px;
+
+    color:
+        var(--cafe);
+
+}
+
+
+.carrito-vacio p {
+
+    font-size:
+        12px;
+
+    color:
+        var(--cafe-claro);
+
+    margin-top:
+        8px;
+
+    max-width:
+        250px;
+
+}
+
+
+/* =========================================================
+   21. PIE CARRITO
+========================================================= */
+
+.carrito-pie {
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        #ead9d3;
+
+}
+
+
+.total {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.total span {
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        2px;
+
+    color:
+        var(--cafe-claro);
+
+}
+
+
+.total strong {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        32px;
+
+    color:
+        var(--cafe);
+
+}
+
+
+/* =========================================================
+   22. BOTÓN VACIAR
+========================================================= */
+
+.boton-vaciar {
+
+    width:
+        100%;
+
+    padding:
+        12px;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        #a86e65;
+
+    font-size:
+        11px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+/* =========================================================
+   23. BOTÓN WHATSAPP
+========================================================= */
+
+.boton-comprar {
+
+    width:
+        100%;
+
+    padding:
+        16px;
+
+    border:
+        none;
+
+    border-radius:
+        50px;
+
+    background:
+        #6c9f76;
+
+    color:
+        white;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .5px;
+
+    box-shadow:
+        0 12px 25px
+        rgba(108,159,118,.25);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.boton-comprar:hover {
+
+    background:
+        #558861;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================================
+   24. INFORMACIÓN
+========================================================= */
+
+.informacion {
+
+    padding:
+        70px 6%;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:
+        25px;
+
+    background:
+        #f7ebe7;
+
+}
+
+
+.informacion-card {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    padding:
+        25px;
+
+    background:
+        rgba(255,255,255,.65);
+
+    border-radius:
+        20px;
+
+}
+
+
+.informacion-card > span {
+
+    width:
+        55px;
+
+    height:
+        55px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    background:
+        white;
+
+    border-radius:
+        50%;
+
+    font-size:
+        23px;
+
+}
+
+
+.informacion-card h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    color:
+        var(--cafe);
+
+    font-size:
+        21px;
+
+}
+
+
+.informacion-card p {
+
+    color:
+        var(--cafe-claro);
+
+    font-size:
+        11px;
+
+    margin-top:
+        4px;
+
+}
+
+
+/* =========================================================
+   25. FOOTER
+========================================================= */
+
+.footer {
+
+    background:
+        var(--cafe);
+
+    color:
+        white;
+
+    padding:
+        55px 6% 30px;
+
+    text-align:
+        center;
+
+}
+
+
+.footer-logo {
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.footer-logo h2 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        30px;
+
+    letter-spacing:
+        2px;
+
+    margin:
+        10px 0;
+
+}
+
+
+.footer-logo p {
+
+    color:
+        #d9c5be;
+
+    font-size:
+        12px;
+
+}
+
+
+.footer-derechos {
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.12);
+
+    padding-top:
+        20px;
+
+    color:
+        #cbb7b0;
+
+    font-size:
+        10px;
+
+    line-height:
+        2;
+
+}
+
+
+/* =========================================================
+   26. BOTÓN VOLVER ARRIBA
+========================================================= */
+
+.volver-arriba {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        25px;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--cafe);
+
+    color:
+        white;
+
+    font-size:
+        20px;
+
+    box-shadow:
+        var(--sombra-fuerte);
+
+    z-index:
+        1500;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.volver-arriba.visible {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   27. SIN PRODUCTOS
+========================================================= */
+
+.sin-productos {
+
+    grid-column:
+        1 / -1;
+
+    text-align:
+        center;
+
+    padding:
+        80px 20px;
+
+}
+
+
+.sin-productos > div {
+
+    font-size:
+        55px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.sin-productos h3 {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        30px;
+
+    color:
+        var(--cafe);
+
+}
+
+
+.sin-productos p {
+
+    font-size:
+        13px;
+
+    color:
+        var(--cafe-claro);
+
+}
+
+
+/* =========================================================
+   28. ANIMACIONES
+========================================================= */
+
+@keyframes flotar {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(10deg);
+
+    }
+
+}
+
+
+@keyframes libroFlotando {
+
+    0%,
+    100% {
+
+        transform:
+            rotateY(-20deg)
+            rotateX(8deg)
+            rotateZ(-3deg)
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            rotateY(-20deg)
+            rotateX(8deg)
+            rotateZ(-3deg)
+            translateY(-15px);
+
+    }
+
+}
+
+
+/* =========================================================
+   29. TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        padding:
+            60px 6%;
+
+    }
+
+
+    .hero-decoracion {
+
+        width:
+            300px;
+
+        height:
+            300px;
+
+    }
+
+
+    .libro-3d {
+
+        width:
+            180px;
+
+        height:
+            240px;
+
+    }
+
+
+    .informacion {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   30. CELULARES
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+
+        padding:
+            14px 5%;
+
+    }
+
+
+    .logo h1 {
+
+        font-size:
+            10px;
+
+        letter-spacing:
+            3px;
+
+    }
+
+
+    .logo h2 {
+
+        font-size:
+            19px;
+
+    }
+
+
+    .logo-icono {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            20px;
+
+    }
+
+
+    .boton-carrito {
+
+        padding:
+            10px 13px;
+
+    }
+
+
+    .boton-carrito span {
+
+        display:
+            none;
+
+    }
+
+
+    .hero {
+
+        min-height:
+            auto;
+
+        padding:
+            70px 6%;
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+    }
+
+
+    .hero-contenido {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+    }
+
+
+    .hero h2 {
+
+        font-size:
+            58px;
+
+    }
+
+
+    .hero p {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .hero-decoracion {
+
+        width:
+            250px;
+
+        height:
+            280px;
+
+    }
+
+
+    .libro-3d {
+
+        width:
+            150px;
+
+        height:
+            200px;
+
+    }
+
+
+    .libro-3d span {
+
+        font-size:
+            65px;
+
+    }
+
+
+    .titulo-seccion h2 {
+
+        font-size:
+            48px;
+
+    }
+
+
+    .catalogo {
+
+        padding:
+            30px 5% 60px;
+
+    }
+
+
+    .productos {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap:
+            14px;
+
+    }
+
+
+    .producto {
+
+        border-radius:
+            16px;
+
+    }
+
+
+    .producto-imagen {
+
+        height:
+            150px;
+
+        font-size:
+            55px;
+
+    }
+
+
+    .producto-info {
+
+        padding:
+            15px;
+
+    }
+
+
+    .producto h3 {
+
+        font-size:
+            20px;
+
+    }
+
+
+    .producto-descripcion {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .producto-precio {
+
+        font-size:
+            23px;
+
+    }
+
+
+    .boton-agregar {
+
+        font-size:
+            9px;
+
+        padding:
+            11px 5px;
+
+    }
+
+
+    .carrito {
+
+        padding:
+            22px;
+
+    }
+
+
+    .informacion {
+
+        padding:
+            50px 5%;
+
+    }
+
+}
+
+
+/* =========================================================
+   31. CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .productos {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .producto-imagen {
+
+        height:
+            190px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size:
+            50px;
+
+    }
+
+
+    .categorias {
+
+        padding-left:
+            4%;
+
+        padding-right:
+            4%;
+
+    }
+
+
+    .filtro {
+
+        font-size:
+            11px;
+
+        padding:
+            9px 14px;
+
+    }
+
+}
+
+/* Todas las imágenes de los productos tendrán el mismo tamaño */
+.producto-imagen {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustar las fotografías sin deformarlas */
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================================================
+   FIN DEL CSS
+========================================================= */
